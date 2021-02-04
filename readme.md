@@ -57,8 +57,33 @@ Una vez reconocida la distribución normal, se procedió a implementar funciones
 
 El cálculo de la probabilidad es en bases estadísticas tras el previo cálculo de la desviación estándar y media muestrales para estimar el complemento a la función de densidad cumulativa calculada con el logaritmo base 10 de la cantidad de gramos (kilos*1000), el cual será la probabilidad.
 
-Finalmente, el cálculo de riesgo hace uso de la probabilidad estimada y adicionalmente el promedio de impactos de meteoritos por año por medio de la siguiente fórmula:
+Finalmente, el cálculo de riesgo hace uso de la probabilidad estimada y adicionalmente el promedio de impactos de meteoritos por año (el cual de hecho se estima en 5.7098, pero se redondea a 6) por medio de la siguiente fórmula:
 
 <img src="https://render.githubusercontent.com/render/math?math=riesgo = 1 - ((1 - probabilidad)^{promedio meteoritos})^{num anyos}">
 
-Como ejemplos, es posible estimar el riesgo de impacto de un meteorito con masa mayor o igual a 1 tonelada, es decir, 1000 kilogramos.
+Como ejemplo, es posible estimar el riesgo de impacto de un meteorito con masa mayor o igual a 1 tonelada, es decir, 1000 kilogramos en los próximos 10 años.
+
+El resultado es un riesgo o probabilidad del 26.22%
+
+Sin embargo, si intentamos estimar la probabilidad o riesgo de impacto de un meteorito con masa mayor o igual a 13,000 toneladas, es decir, un meteorito similar al de Chelyabinsk (Popova et al., 2013), obtenemos el siguiente resultado para un lapso de 100 años:
+
+Un riesgo o probabilidad de tan solo el 0.0000008439%
+
+Es decir, una probabilidad prácticamente nula, lo cual claramente no es del todo exacto ya que se estima que dichos meteoritos se dan una vez cada 60 años, como se observa en la imagen con cálculos obtenidos por medio de la plataforma web https://impact.ese.ic.ac.uk/ImpactEarth/ImpactEffects/ (Marcus et al., 2010):
+
+![Calculo frecuencia Chelyabinsk](chelyabinsk.png)
+
+Nuevamente, se concluye, y retomando lo anteriormente dicho, que muy probablemente este conjunto de datos tiene la limitante de que solo engloba aquellos meteoritos que impactaron con la Tierra, cuya masa además fue calculada o registrada en base a aquella obtenida de la medición de los restos extraídos tras el impacto. Obviamente tal situación subestima enormemente la frecuencia de impactos de meteoritos, la cual también debería ser mayor a 6, de hecho en el orden de los miles inclusive (Mathewson, 2016). Esto debido al hecho de que, nuevamente, muchos meteoritos no alcanzan la superficie y además, no todos son avistados, sino descubiertos posteriormente.
+
+Y finalmente, agregado al factor de la frecuencia, la masa claramente puede verse influida también dado que a pesar de ser medidos estos meteoritos recabados, muy probablemente perdieron una gran porpoción de su masa original durante su trayecto.
+
+## Instrucciones para Ejecutar
+
+* Instalar los paquetes recomendados en el archivo "requirements.txt"
+* Ejecutar las celdas de la libreta de python proveída "Proyecto.ipynb" dentro de un entorno como Jupyter Lab
+
+## Bibliografía
+
+* Popova, O. et al. (2013). Chelyabinsk Airburst, Damage Assessment, Meteorite Recovery, and Characterization. Science AAAS. Consultado en: http://cams.seti.org/Popova2013-ms.pdf
+* Marcus, R. et al. (2010). Earth Impacts Effects Program. Imperial College London. Consultado en: https://impact.ese.ic.ac.uk/ImpactEarth/ImpactEffects/
+* Mathewson, S. (2016). How Often do Meteorites Hit the Earth?. Space.com. Consultado en: https://www.space.com/33695-thousands-meteorites-litter-earth-unpredictable-collisions.html
