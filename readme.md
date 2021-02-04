@@ -59,6 +59,6 @@ El cálculo de la probabilidad es en bases estadísticas tras el previo cálculo
 
 Finalmente, el cálculo de riesgo hace uso de la probabilidad estimada y adicionalmente el promedio de impactos de meteoritos por año por medio de la siguiente fórmula:
 
-<img src="https://render.githubusercontent.com/render/math?math=riesgo = 1 - ((1 - probabilidad)^(promedio meteoritos))^(num años)">
+<img src="https://render.githubusercontent.com/render/math?math=riesgo = 1 - ((1 - probabilidad)^(promedio meteoritos))^(num anyos)">
 
 Como ejemplos, es posible estimar el riesgo de impacto de un meteorito con masa mayor o igual a 1 tonelada, es decir, 1000 kilogramos.
